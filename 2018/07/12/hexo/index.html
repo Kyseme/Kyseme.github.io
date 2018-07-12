@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Hexo搭建github博客手记之前写笔记都是用印象笔记，也想过搭建一个博客分享笔记，一直没有做，今天刚好有时间就着手开始实施了，把搭建的步骤记录下来，以备以后参考 首先介绍两个官网   hexo官网 hexo-next官网  环境配置 下载并安装node (window系统访问node官网下载安装包,mac系统可以使用Homebrew工具进行安装) 安装hexo,使用npm安装hexo(全局安装">
+<meta name="description" content="Hexo搭建github博客手记之前写笔记都是用印象笔记，也想过搭建一个博客分享笔记，一直没有做，今天刚好有时间就着手开始实施了，把搭建的步骤记录下来，以备以后参考 首先介绍两个官网   hexo官网 hexo-next官网">
 <meta name="keywords" content="hexo,next">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo">
 <meta property="og:url" content="http://yoursite.com/2018/07/12/hexo/index.html">
 <meta property="og:site_name" content="kyseme">
-<meta property="og:description" content="Hexo搭建github博客手记之前写笔记都是用印象笔记，也想过搭建一个博客分享笔记，一直没有做，今天刚好有时间就着手开始实施了，把搭建的步骤记录下来，以备以后参考 首先介绍两个官网   hexo官网 hexo-next官网  环境配置 下载并安装node (window系统访问node官网下载安装包,mac系统可以使用Homebrew工具进行安装) 安装hexo,使用npm安装hexo(全局安装">
+<meta property="og:description" content="Hexo搭建github博客手记之前写笔记都是用印象笔记，也想过搭建一个博客分享笔记，一直没有做，今天刚好有时间就着手开始实施了，把搭建的步骤记录下来，以备以后参考 首先介绍两个官网   hexo官网 hexo-next官网">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-12T08:42:27.194Z">
+<meta property="og:updated_time" content="2018-07-12T14:55:50.401Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo">
-<meta name="twitter:description" content="Hexo搭建github博客手记之前写笔记都是用印象笔记，也想过搭建一个博客分享笔记，一直没有做，今天刚好有时间就着手开始实施了，把搭建的步骤记录下来，以备以后参考 首先介绍两个官网   hexo官网 hexo-next官网  环境配置 下载并安装node (window系统访问node官网下载安装包,mac系统可以使用Homebrew工具进行安装) 安装hexo,使用npm安装hexo(全局安装">
+<meta name="twitter:description" content="Hexo搭建github博客手记之前写笔记都是用印象笔记，也想过搭建一个博客分享笔记，一直没有做，今天刚好有时间就着手开始实施了，把搭建的步骤记录下来，以备以后参考 首先介绍两个官网   hexo官网 hexo-next官网">
 
 
 
@@ -364,6 +364,7 @@
 <li><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">hexo官网</a></li>
 <li><a href="https://theme-next.iissnan.com/" target="_blank" rel="noopener">hexo-next官网</a></li>
 </ul>
+<a id="more"></a>
 <h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><ul>
 <li>下载并安装node (window系统访问node官网下载安装包,mac系统可以使用Homebrew工具进行安装)</li>
 <li>安装hexo,使用npm安装hexo(全局安装)，打开cmd运行 $ npm install -g hexo-cli</li>
@@ -406,6 +407,7 @@
 <h2 id="新建文件"><a href="#新建文件" class="headerlink" title="新建文件"></a>新建文件</h2><p>可以执行下列命令创建一篇新文章<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure></p>
 <p>您可以在命令中指定文章的布局（layout），默认为 post，可以通过修改 _config.yml 中的 default_layout 参数来指定默认布局。</p>
 <p>Hexo 有三种默认布局：post、page 和 draft，它们分别对应不同的路径，而您自定义的其他布局和 post 相同，都将储存到 source/_posts 文件夹。</p>
+<h2 id="设置阅读全文"><a href="#设置阅读全文" class="headerlink" title="设置阅读全文"></a>设置阅读全文</h2><p>在文章中使用&lt; !–more–&gt; 手动进行截断<br>这种方法可以根据文章的内容，自己在合适的位置添加 &lt; !–more–&gt; 标签，使用灵活，也是Hexo推荐的方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">## 描述</span><br><span class="line">&lt;!--more--&gt;</span><br></pre></td></tr></table></figure></p>
 <h2 id="添加标签页面和其他"><a href="#添加标签页面和其他" class="headerlink" title="添加标签页面和其他"></a>添加标签页面和其他</h2><p>可以看官方文档<br><a href="https://theme-next.iissnan.com/theme-settings.html#tags-page" target="_blank" rel="noopener">hexo-next文档</a></p>
 
       
@@ -426,7 +428,7 @@
   <p><span>本文标题:</span><a href="/2018/07/12/hexo/">hexo</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 kyseme 的个人博客">kyseme</a></p>
   <p><span>发布时间:</span>2018年07月12日 - 15:07</p>
-  <p><span>最后更新:</span>2018年07月12日 - 16:07</p>
+  <p><span>最后更新:</span>2018年07月12日 - 22:07</p>
   <p><span>原始链接:</span><a href="/2018/07/12/hexo/" title="hexo">http://yoursite.com/2018/07/12/hexo/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2018/07/12/hexo/"  aria-label="复制成功！"></i></span>
   </p>
@@ -618,7 +620,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo搭建github博客手记"><span class="nav-number">1.</span> <span class="nav-text">Hexo搭建github博客手记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境配置"><span class="nav-number">1.1.</span> <span class="nav-text">环境配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地搭建hexo系统"><span class="nav-number">1.2.</span> <span class="nav-text">本地搭建hexo系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将本地博客与GitHub相关联"><span class="nav-number">1.3.</span> <span class="nav-text">将本地博客与GitHub相关联</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更改hexo主题为hexo-next"><span class="nav-number">1.4.</span> <span class="nav-text">更改hexo主题为hexo-next</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新建文件"><span class="nav-number">1.5.</span> <span class="nav-text">新建文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加标签页面和其他"><span class="nav-number">1.6.</span> <span class="nav-text">添加标签页面和其他</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo搭建github博客手记"><span class="nav-number">1.</span> <span class="nav-text">Hexo搭建github博客手记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境配置"><span class="nav-number">1.1.</span> <span class="nav-text">环境配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地搭建hexo系统"><span class="nav-number">1.2.</span> <span class="nav-text">本地搭建hexo系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将本地博客与GitHub相关联"><span class="nav-number">1.3.</span> <span class="nav-text">将本地博客与GitHub相关联</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更改hexo主题为hexo-next"><span class="nav-number">1.4.</span> <span class="nav-text">更改hexo主题为hexo-next</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新建文件"><span class="nav-number">1.5.</span> <span class="nav-text">新建文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置阅读全文"><span class="nav-number">1.6.</span> <span class="nav-text">设置阅读全文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加标签页面和其他"><span class="nav-number">1.7.</span> <span class="nav-text">添加标签页面和其他</span></a></li></ol></li></ol></div>
             
 
           </div>

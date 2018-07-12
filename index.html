@@ -352,58 +352,19 @@
 
       
         
-          
-            <h1 id="Hexo搭建github博客手记"><a href="#Hexo搭建github博客手记" class="headerlink" title="Hexo搭建github博客手记"></a>Hexo搭建github博客手记</h1><p>之前写笔记都是用印象笔记，也想过搭建一个博客分享笔记，一直没有做，今天刚好有时间就着手开始实施了，把搭建的步骤记录下来，以备以后参考</p>
+          <h1 id="Hexo搭建github博客手记"><a href="#Hexo搭建github博客手记" class="headerlink" title="Hexo搭建github博客手记"></a>Hexo搭建github博客手记</h1><p>之前写笔记都是用印象笔记，也想过搭建一个博客分享笔记，一直没有做，今天刚好有时间就着手开始实施了，把搭建的步骤记录下来，以备以后参考</p>
 <p>首先介绍两个官网 </p>
 <ul>
 <li><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">hexo官网</a></li>
 <li><a href="https://theme-next.iissnan.com/" target="_blank" rel="noopener">hexo-next官网</a></li>
 </ul>
-<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><ul>
-<li>下载并安装node (window系统访问node官网下载安装包,mac系统可以使用Homebrew工具进行安装)</li>
-<li>安装hexo,使用npm安装hexo(全局安装)，打开cmd运行 $ npm install -g hexo-cli</li>
-<li>下载并安装git。(window系统访问git官网下载安装包,mac系统可以使用Homebrew工具进行安装)</li>
-</ul>
-<h2 id="本地搭建hexo系统"><a href="#本地搭建hexo系统" class="headerlink" title="本地搭建hexo系统"></a>本地搭建hexo系统</h2><ul>
-<li>新建一个文件夹，如hexo</li>
-<li>进入该文件里面，用bash命令，在bash中输入: hexo init(生成hexo模板)</li>
-<li>模板生成之后，输入命名 npm install </li>
-<li>最后运行 hexo server (开启服务，运行该程序，访问本地localhost:4000)</li>
-</ul>
-<h2 id="将本地博客与GitHub相关联"><a href="#将本地博客与GitHub相关联" class="headerlink" title="将本地博客与GitHub相关联"></a>将本地博客与GitHub相关联</h2><ul>
-<li>登陆自己的github系统，用自己GitHub的用户名创建一个xxx.github.io的仓库，比如，我的给github用户名为Kyseme,则我创建的仓库名名为Kyseme.github.io</li>
-<li>如果github没有配置ssh,首先需要配置ssh，我的是已经配置好的，直接google或者百度搜索配置ssh，能找到不少文章</li>
-<li><p>打开hexo文件夹，里面有_config.xml文件，修改配置，在文件末尾部分(注意type冒号和git中间有一个空格，后面的一样有空格)</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">repository:</span> <span class="string">git@github.com:Kyseme/Kyseme.github.io.git</span></span><br><span class="line"><span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>运行 npm install hexo-deployer-git –save</p>
-</li>
-<li>运行 hexo g（本地生成静态文件）</li>
-<li>运行 hexo d（将本地静态文件推送至Github）<br>此时，打开浏览器，访问 <a href="http://Kyseme.github.io" target="_blank" rel="noopener">http://Kyseme.github.io</a> </li>
-</ul>
-<h2 id="更改hexo主题为hexo-next"><a href="#更改hexo主题为hexo-next" class="headerlink" title="更改hexo主题为hexo-next"></a>更改hexo主题为hexo-next</h2><ul>
-<li>下载next主题<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> hexo</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>完成之后，可以看到themes文件夹下面多了一个next文件夹</p>
-<ul>
-<li><p>启用next主题，在hexo的_config.yml中设置</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>运行 hexo clean (清除缓存文件 (db.json) 和已生成的静态文件 (public)。</p>
-</li>
-</ul>
-<p>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令)</p>
-<ul>
-<li>运行 hexo g（本地生成静态文件）</li>
-<li>运行 hexo d（将本地静态文件推送至Github）</li>
-</ul>
-<h2 id="新建文件"><a href="#新建文件" class="headerlink" title="新建文件"></a>新建文件</h2><p>可以执行下列命令创建一篇新文章<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure></p>
-<p>您可以在命令中指定文章的布局（layout），默认为 post，可以通过修改 _config.yml 中的 default_layout 参数来指定默认布局。</p>
-<p>Hexo 有三种默认布局：post、page 和 draft，它们分别对应不同的路径，而您自定义的其他布局和 post 相同，都将储存到 source/_posts 文件夹。</p>
-<h2 id="添加标签页面和其他"><a href="#添加标签页面和其他" class="headerlink" title="添加标签页面和其他"></a>添加标签页面和其他</h2><p>可以看官方文档<br><a href="https://theme-next.iissnan.com/theme-settings.html#tags-page" target="_blank" rel="noopener">hexo-next文档</a></p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/12/hexo/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
