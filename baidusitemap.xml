@@ -4,19 +4,21 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/07/12/css%E5%B1%85%E4%B8%AD%E5%B0%8F%E7%BB%93/</loc>
-    <lastmod>2018-07-13T08:38:54.667Z</lastmod>
+    <loc>http://yoursite.com/2018/07/14/https/</loc>
+    <lastmod>2018-07-14T10:00:47.224Z</lastmod>
     <data>
         <display>
-        <title>css居中小结</title>
-        <pubTime>2018-07-12T06:13:35.000Z</pubTime>
+        <title>https和http传输</title>
+        <pubTime>2018-07-14T02:14:42.000Z</pubTime>
         
-        <tag>css</tag>
+        <tag>http</tag>
+         
+        <tag>https</tag>
          
          
            
              
-              <breadCrumb title="css" url="http://yoursite.com/categories/css/"/>
+              <breadCrumb title="网络通信" url="http://yoursite.com/categories/%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1/"/>
           
         </display>
     </data>
@@ -25,7 +27,7 @@
     
   <url>
     <loc>http://yoursite.com/2018/07/12/hexo/</loc>
-    <lastmod>2018-07-13T02:22:33.942Z</lastmod>
+    <lastmod>2018-07-14T07:55:55.250Z</lastmod>
     <data>
         <display>
         <title>hexo</title>
@@ -39,6 +41,26 @@
            
              
               <breadCrumb title="hexo" url="http://yoursite.com/categories/hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/07/12/css%E5%B1%85%E4%B8%AD%E5%B0%8F%E7%BB%93/</loc>
+    <lastmod>2018-07-14T02:09:09.763Z</lastmod>
+    <data>
+        <display>
+        <title>css居中小结</title>
+        <pubTime>2018-07-12T06:13:35.000Z</pubTime>
+        
+        <tag>css</tag>
+         
+         
+           
+             
+              <breadCrumb title="css" url="http://yoursite.com/categories/css/"/>
           
         </display>
     </data>
