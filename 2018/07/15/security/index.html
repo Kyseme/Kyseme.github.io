@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="kyseme">
 <meta property="og:description" content="web安全的几个方面 跨站脚本攻击XSS用户在浏览网站、使用即时通讯软件、甚至在阅读电子邮件时，通常会点击其中的链接。攻击者通过在链接中插入恶意代码，就能够盗取用户信息。XSS攻击一般分为两类:反射型和存储型  反射性：url参数直接注入简单的将用户输入的数据”反射”给浏览器,攻击时需要用户配合点击 1http://xxx.com/?from=&amp;lt;script&amp;gt;alert(documen">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-18T13:00:16.022Z">
+<meta property="og:updated_time" content="2018-07-18T13:05:51.397Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="security">
 <meta name="twitter:description" content="web安全的几个方面 跨站脚本攻击XSS用户在浏览网站、使用即时通讯软件、甚至在阅读电子邮件时，通常会点击其中的链接。攻击者通过在链接中插入恶意代码，就能够盗取用户信息。XSS攻击一般分为两类:反射型和存储型  反射性：url参数直接注入简单的将用户输入的数据”反射”给浏览器,攻击时需要用户配合点击 1http://xxx.com/?from=&amp;lt;script&amp;gt;alert(documen">
@@ -368,7 +368,7 @@
 </li>
 <li>dom型xss<br>可以是存储型也可以是反射型，对html页面中的dom树进行的修改攻击.</li>
 </ul>
-<p>无论是反射型还是存储型，都需要与服务器进行交互，即客户端进行xss攻击，服务器将响应数据返回给客户端，触发xss攻击；而dom型xss不与服务器进行交互，只和客户端的js交互，即提交的恶意代码放在js中执行，然后显示出来。</p>
+<p>无论是反射型还是存储型，都需要与服务器进行交互，即客户端进行xss攻击，服务器将响应数据返回给客户端，触发xss攻击；而dom型xss不与服务器进行交互，只和客户端的js交互，即提交的恶意代码放在js中执行，然后显示出来。<br><a id="more"></a></p>
 <h3 id="XSS危害"><a href="#XSS危害" class="headerlink" title="XSS危害"></a>XSS危害</h3><p>xss漏洞是发生在客户端，目的是让浏览器执行一段用户提交的恶意js代码，从而达到某种目的。从表面上看，xss漏洞的危害止步于客户端，且主要就是用来执行js获取用户信息（比如浏览器版本等等）。然而由于xss漏洞可能发生的地方很多，因此被利用的情况也不统一，以下列举了xss漏洞能够造成的一些危害（xss漏洞危害包含但不仅限于以下几种）。</p>
 <ul>
 <li>cookie劫持（窃取cookie）</li>
@@ -390,7 +390,7 @@
 </li>
 </ul>
 <h4 id="XSS转义"><a href="#XSS转义" class="headerlink" title="XSS转义"></a>XSS转义</h4><ul>
-<li><p>将输入的内容属性进行转义<br>常见的转义有<br>|   显示结果   |  描述    |   实体名称   | 实体编号 |<br>| —- | —- | —- | —-|<br>|    &lt;    |小于号|    &lt;|    &#60;|<br>|    &gt;    |大于号|    &gt;|    &#62;|<br>|    &amp;    |和号|    &amp;|   &#38;|<br>|    “    |引号|    &quot;|    &#34;|</p>
+<li><p>将输入的内容属性进行转义<br>常见的转义有<br>|  显示结果 | 描述   |  实体名称  | 实体编号 |<br>| —- | —- | —- | —- |<br>|    &lt;|小于号|    &lt;|    &#60;|<br>|    &gt;|大于号|&gt;|    &#62;|<br>|    &amp;|和号|&amp;|   &#38;|<br>|    “|引号|&quot;|    &#34;|</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">str = str.replace(<span class="regexp">/&amp;/g</span>,<span class="string">'&amp;amp;'</span>).replace(<span class="regexp">/&lt;/g</span>,<span class="string">'&amp;lt;'</span>).replace(<span class="regexp">/&gt;/g</span>,<span class="string">'&amp;gt;'</span>).replace(<span class="regexp">/"/g</span>,<span class="string">'&amp;quto;'</span>);</span><br><span class="line">str = str.replace(<span class="regexp">/'/g</span>,<span class="string">'&amp;#39;'</span>);</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>js脚本用JSON.stringfy(str);<br>JSON.stringfy(str)可以将转化为转化为字符串,这样字符串格式的数据不会执行。JSON.stringfy(),只能将JSON数据格式的数据转为字符串，不是JSON数据格式的数据将会删除</p>
