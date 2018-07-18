@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/07/15/security/</loc>
+    <lastmod>2018-07-18T13:00:16.022Z</lastmod>
+    <data>
+        <display>
+        <title>security</title>
+        <pubTime>2018-07-15T02:45:34.000Z</pubTime>
+        
+        <tag>安全</tag>
+         
+        <tag>web安全</tag>
+         
+         
+           
+             
+              <breadCrumb title="web安全" url="http://yoursite.com/categories/web%E5%AE%89%E5%85%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/07/14/https/</loc>
     <lastmod>2018-07-14T10:00:47.224Z</lastmod>
     <data>
