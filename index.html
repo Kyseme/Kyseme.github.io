@@ -353,16 +353,8 @@
       
         
           <p>web安全的几个方面</p>
-<h2 id="跨站脚本攻击XSS"><a href="#跨站脚本攻击XSS" class="headerlink" title="跨站脚本攻击XSS"></a>跨站脚本攻击XSS</h2><p>用户在浏览网站、使用即时通讯软件、甚至在阅读电子邮件时，通常会点击其中的链接。攻击者通过在链接中插入恶意代码，就能够盗取用户信息。<br>XSS攻击一般分为两类:反射型和存储型</p>
-<ul>
-<li><p>反射性：url参数直接注入<br>简单的将用户输入的数据”反射”给浏览器,攻击时需要用户配合点击</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://xxx.com/?from=&lt;script&gt;alert(document.cookies)&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>存储到db后读取时注入<br>用户的输入框中注入script脚本,脚本存储到数据库,再次访问页面则会自动运行js脚本.常见的形式有发表评论等输入功能.</p>
-</li>
-<li>dom型xss<br>可以是存储型也可以是反射型，对html页面中的dom树进行的修改攻击.</li>
-</ul>
-<p>无论是反射型还是存储型，都需要与服务器进行交互，即客户端进行xss攻击，服务器将响应数据返回给客户端，触发xss攻击；而dom型xss不与服务器进行交互，只和客户端的js交互，即提交的恶意代码放在js中执行，然后显示出来。<br>
+<p>浏览器的同源策略，限制了来自不同源的“document” 或 脚本， 对当前“ document” 读取或设置某些属性。如果没有同源策略,可能a.com的一段js脚本，在b.com未曾加载此脚本时，就可以随意修改b.com的页面。同源策略指，协议，域名，端口相同。</p>
+<p>在浏览器中,&lt;script&gt;,&lt;img&gt;,&lt;iframe&gt;,&lt;linkmg&gt;等标签可以跨域加载资源，而不受同源策略的限制。这些带’src’属性的标签每次加载时，实际上是由浏览器发起了一次GET请求。不同于XMLHttpRequest的是，浏览器限制了Javascript的权限，使其不能读/写返回的内容.浏览器的同源策略是浏览器安全的基础，同源策略一旦出现漏洞被绕过，也将带来非常严重的后果，很多基于同源策略制定的安全方案都将失去效果。<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/07/15/security/#more" rel="contents">
