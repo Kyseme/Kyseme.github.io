@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="web安全的几个方面 浏览器的同源策略，限制了来自不同源的“document” 或 脚本， 对当前“ document” 读取或设置某些属性。如果没有同源策略,可能a.com的一段js脚本，在b.com未曾加载此脚本时，就可以随意修改b.com的页面。同源策略指，协议，域名，端口相同。 在浏览器中,&amp;lt;script&amp;gt;,&amp;lt;img&amp;gt;,&amp;lt;iframe&amp;gt;,&amp;lt;link">
+<meta name="description" content="浏览器的同源策略，限制了来自不同源的“document” 或 脚本， 对当前“ document” 读取或设置某些属性。如果没有同源策略,可能a.com的一段js脚本，在b.com未曾加载此脚本时，就可以随意修改b.com的页面。同源策略指，协议，域名，端口相同。 在浏览器中,&amp;lt;script&amp;gt;,&amp;lt;img&amp;gt;,&amp;lt;iframe&amp;gt;,&amp;lt;linkmg&amp;gt;等标签可以">
 <meta name="keywords" content="安全,web安全">
 <meta property="og:type" content="article">
 <meta property="og:title" content="security">
 <meta property="og:url" content="http://yoursite.com/2018/07/15/security/index.html">
 <meta property="og:site_name" content="kyseme">
-<meta property="og:description" content="web安全的几个方面 浏览器的同源策略，限制了来自不同源的“document” 或 脚本， 对当前“ document” 读取或设置某些属性。如果没有同源策略,可能a.com的一段js脚本，在b.com未曾加载此脚本时，就可以随意修改b.com的页面。同源策略指，协议，域名，端口相同。 在浏览器中,&amp;lt;script&amp;gt;,&amp;lt;img&amp;gt;,&amp;lt;iframe&amp;gt;,&amp;lt;link">
+<meta property="og:description" content="浏览器的同源策略，限制了来自不同源的“document” 或 脚本， 对当前“ document” 读取或设置某些属性。如果没有同源策略,可能a.com的一段js脚本，在b.com未曾加载此脚本时，就可以随意修改b.com的页面。同源策略指，协议，域名，端口相同。 在浏览器中,&amp;lt;script&amp;gt;,&amp;lt;img&amp;gt;,&amp;lt;iframe&amp;gt;,&amp;lt;linkmg&amp;gt;等标签可以">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-19T13:08:54.574Z">
+<meta property="og:updated_time" content="2018-07-19T13:13:38.371Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="security">
-<meta name="twitter:description" content="web安全的几个方面 浏览器的同源策略，限制了来自不同源的“document” 或 脚本， 对当前“ document” 读取或设置某些属性。如果没有同源策略,可能a.com的一段js脚本，在b.com未曾加载此脚本时，就可以随意修改b.com的页面。同源策略指，协议，域名，端口相同。 在浏览器中,&amp;lt;script&amp;gt;,&amp;lt;img&amp;gt;,&amp;lt;iframe&amp;gt;,&amp;lt;link">
+<meta name="twitter:description" content="浏览器的同源策略，限制了来自不同源的“document” 或 脚本， 对当前“ document” 读取或设置某些属性。如果没有同源策略,可能a.com的一段js脚本，在b.com未曾加载此脚本时，就可以随意修改b.com的页面。同源策略指，协议，域名，端口相同。 在浏览器中,&amp;lt;script&amp;gt;,&amp;lt;img&amp;gt;,&amp;lt;iframe&amp;gt;,&amp;lt;linkmg&amp;gt;等标签可以">
 
 
 
@@ -358,8 +358,7 @@
       
 
       
-        <p>web安全的几个方面</p>
-<p>浏览器的同源策略，限制了来自不同源的“document” 或 脚本， 对当前“ document” 读取或设置某些属性。如果没有同源策略,可能a.com的一段js脚本，在b.com未曾加载此脚本时，就可以随意修改b.com的页面。同源策略指，协议，域名，端口相同。</p>
+        <p>浏览器的同源策略，限制了来自不同源的“document” 或 脚本， 对当前“ document” 读取或设置某些属性。如果没有同源策略,可能a.com的一段js脚本，在b.com未曾加载此脚本时，就可以随意修改b.com的页面。同源策略指，协议，域名，端口相同。</p>
 <p>在浏览器中,&lt;script&gt;,&lt;img&gt;,&lt;iframe&gt;,&lt;linkmg&gt;等标签可以跨域加载资源，而不受同源策略的限制。这些带’src’属性的标签每次加载时，实际上是由浏览器发起了一次GET请求。不同于XMLHttpRequest的是，浏览器限制了Javascript的权限，使其不能读/写返回的内容.浏览器的同源策略是浏览器安全的基础，同源策略一旦出现漏洞被绕过，也将带来非常严重的后果，很多基于同源策略制定的安全方案都将失去效果。<br><a id="more"></a></p>
 <h2 id="跨站脚本攻击XSS"><a href="#跨站脚本攻击XSS" class="headerlink" title="跨站脚本攻击XSS"></a>跨站脚本攻击XSS</h2><p>用户在浏览网站、使用即时通讯软件、甚至在阅读电子邮件时，通常会点击其中的链接。攻击者通过在链接中插入恶意代码，就能够盗取用户信息。<br>XSS攻击根据效果不同分为:反射型,存储型和DOM型XSS</p>
 <ul>
@@ -569,6 +568,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2018/07/20/baidu/" rel="prev" title="牛客刷题之百度">
+                牛客刷题之百度 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -648,7 +651,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -659,7 +662,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -670,7 +673,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

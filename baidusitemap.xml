@@ -4,21 +4,45 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/07/15/security/</loc>
-    <lastmod>2018-07-19T13:08:54.574Z</lastmod>
+    <loc>http://yoursite.com/2018/07/20/baidu/</loc>
+    <lastmod>2018-07-20T10:31:22.319Z</lastmod>
     <data>
         <display>
-        <title>security</title>
-        <pubTime>2018-07-15T02:45:34.000Z</pubTime>
+        <title>牛客刷题之百度</title>
+        <pubTime>2018-07-20T01:42:11.000Z</pubTime>
         
-        <tag>安全</tag>
+        <tag>牛客</tag>
          
-        <tag>web安全</tag>
+        <tag>百度</tag>
          
          
            
              
-              <breadCrumb title="web安全" url="http://yoursite.com/categories/web%E5%AE%89%E5%85%A8/"/>
+              <breadCrumb title="牛客" url="http://yoursite.com/categories/%E7%89%9B%E5%AE%A2/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/07/20/banner/</loc>
+    <lastmod>2018-07-20T10:22:43.823Z</lastmod>
+    <data>
+        <display>
+        <title>banner</title>
+        <pubTime>2018-07-20T10:19:36.000Z</pubTime>
+        
+        <tag>banner</tag>
+         
+        <tag>html</tag>
+         
+        <tag>图片轮播</tag>
+         
+         
+           
+             
+              <breadCrumb title="html" url="http://yoursite.com/categories/html/"/>
           
         </display>
     </data>
@@ -27,7 +51,7 @@
     
   <url>
     <loc>http://yoursite.com/2018/07/14/https/</loc>
-    <lastmod>2018-07-14T10:00:47.224Z</lastmod>
+    <lastmod>2018-07-19T13:20:01.494Z</lastmod>
     <data>
         <display>
         <title>https和http传输</title>
@@ -41,6 +65,28 @@
            
              
               <breadCrumb title="网络通信" url="http://yoursite.com/categories/%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/07/15/security/</loc>
+    <lastmod>2018-07-19T13:13:38.371Z</lastmod>
+    <data>
+        <display>
+        <title>security</title>
+        <pubTime>2018-07-15T02:45:34.000Z</pubTime>
+        
+        <tag>安全</tag>
+         
+        <tag>web安全</tag>
+         
+         
+           
+             
+              <breadCrumb title="web安全" url="http://yoursite.com/categories/web%E5%AE%89%E5%85%A8/"/>
           
         </display>
     </data>

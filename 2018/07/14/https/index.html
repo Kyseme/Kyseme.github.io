@@ -95,7 +95,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/Kyseme/MarkdownPhoto/master/res/certifical.png">
 <meta property="og:image" content="http://p1.pstatp.com/large/pgc-image/15276921029615e6c447ded">
 <meta property="og:image" content="http://p3.pstatp.com/large/pgc-image/1527692102982e67c7bc915">
-<meta property="og:updated_time" content="2018-07-14T10:00:47.224Z">
+<meta property="og:updated_time" content="2018-07-19T13:20:01.494Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="https和http传输">
 <meta name="twitter:description" content="http:超文本传输协议,是一种用于分布式、协作式和超媒体信息系统的应用层协议，也是万维网的数据通信的基础，设计最初的目的是为了统一发布和接收HTML页面的标准，由统一资源标识符（Uniform Resource Identifiers，URI）来标识 https:超文本传输安全协议(HTTP+SSL/TLS)，常称为HTTP over TLS，HTTP over SSL或HTTP Secure,">
@@ -368,20 +368,19 @@
 
       
         <p>http:超文本传输协议,是一种用于分布式、协作式和超媒体信息系统的应用层协议，也是万维网的数据通信的基础，设计最初的目的是为了统一发布和接收HTML页面的标准，由统一资源标识符（Uniform Resource Identifiers，URI）来标识</p>
-<p>https:超文本传输安全协议(HTTP+SSL/TLS)，常称为HTTP over TLS，HTTP over SSL或HTTP Secure,HTTPS在HTTP层和TCP层之间加了一个SSL层，SSL向上提供加密和解密的服务，对HTTP比较透明，这样也便于服务器和客户端的实现以及升级。</p>
-<a id="more"></a>
-<h2 id="TCP-IP协议"><a href="#TCP-IP协议" class="headerlink" title="TCP/IP协议"></a>TCP/IP协议</h2><p>HTTP是基于TCP/IP协议之上的。两台计算机之间的通信是通过TCP/IP协议在因特网上进行的。实际上这个是两个协议：</p>
+<p>https:超文本传输安全协议(HTTP+SSL/TLS)，常称为HTTP over TLS，HTTP over SSL或HTTP Secure,HTTPS在HTTP层和TCP层之间加了一个SSL层，SSL向上提供加密和解密的服务，对HTTP比较透明，这样也便于服务器和客户端的实现以及升级。<br><a id="more"></a></p>
+<h2 id="TCP-IP协议"><a href="#TCP-IP协议" class="headerlink" title="TCP/IP协议"></a>TCP/IP协议</h2><p>HTTP是基于TCP/IP协议之上的。两台计算机之间的通信是通过TCP/IP协议在因特网上进行的。</p>
 <h3 id="IP：计算机之间的通信"><a href="#IP：计算机之间的通信" class="headerlink" title="IP：计算机之间的通信"></a>IP：计算机之间的通信</h3><ul>
-<li>IP协议是计算机用来相互识别的通信的一种机制，每台计算机都有一个IP.用来在internet上标识这台计算机。IP 负责在因特网上发送和接收数据包。通过 IP，消息（或者其他数据）被分割为小的独立包，并通过因特网在计算机之间传送。IP 负责将每个包路由至它的目的地。</li>
+<li>IP协议是计算机用来相互识别的通信的一种机制，每台计算机都有一个IP.用来在internet上标识这台计算机。IP负责在因特网上发送和接收数据包。通过IP，消息（或者其他数据）被分割为小的独立包，并通过因特网在计算机之间传送。IP负责将每个包路由至它的目的地。</li>
 <li>IP协议仅仅是允许计算机相互发消息，但它并不检查消息是否以发送的次序到达而且没有损坏（只查关键的头数据）。为了提供消息检验功能，直接在IP协议上设计了传输控制协议TCP.</li>
 </ul>
-<h3 id="TCP-应用程序之间的通信"><a href="#TCP-应用程序之间的通信" class="headerlink" title="TCP : 应用程序之间的通信"></a>TCP : 应用程序之间的通信</h3><ul>
+<h3 id="TCP：应用程序之间的通信"><a href="#TCP：应用程序之间的通信" class="headerlink" title="TCP：应用程序之间的通信"></a>TCP：应用程序之间的通信</h3><ul>
 <li>TCP确保数据包以正确的次序到达，并且尝试确认数据包的内容没有改变。TCP在IP地址之上引端口（port），它允许计算机通过网络提供各种服务。一些端口号为不同的服务保留，而且这些端口号是众所周知</li>
 <li>服务或者守护进程：在提供服务的机器上，有程序监听特定端口上的通信流。例如大多数电子邮件通信流出现在端口25上，用于www的HTTP通信流出现在80端口上。</li>
-<li>当应用程序希望通过 TCP 与另一个应用程序通信时，它会发送一个通信请求。这个请求必须被送到一个确切的地址。在双方“握手”之后，TCP 将在两个应用程序之间建立一个全双工 (full-duplex) 的通信，占用两个计算机之间整个的通信线路。TCP 用于从应用程序到网络的数据传输控制。TCP 负责在数据传送之前将它们分割为 IP 包，然后在它们到达的时候将它们重组。</li>
+<li>当应用程序希望通过 TCP 与另一个应用程序通信时，它会发送一个通信请求。这个请求必须被送到一个确切的地址。在双方“握手”之后，TCP将在两个应用程序之间建立一个全双工 (full-duplex) 的通信，占用两个计算机之间整个的通信线路。TCP 用于从应用程序到网络的数据传输控制。TCP负责在数据传送之前将它们分割为IP包，然后在它们到达的时候将它们重组。</li>
 </ul>
-<p>TCP/IP 就是TCP 和 IP 两个协议在一起协同工作，有上下层次的关系。</p>
-<p>TCP 负责应用软件（比如你的浏览器）和网络软件之间的通信。IP 负责计算机之间的通信。TCP 负责将数据分割并装入 IP 包，IP 负责将包发送至接受者，传输过程要经IP路由器负责根据通信量、网络中的错误或者其他参数来进行正确地寻址，然后在它们到达的时候重新组合它们。</p>
+<p>TCP/IP就是TCP和IP两个协议在一起协同工作，有上下层次的关系。</p>
+<p>TCP负责应用软件（比如你的浏览器）和网络软件之间的通信。IP负责计算机之间的通信。TCP负责将数据分割并装入IP包，IP负责将包发送至接受者，传输过程要经IP路由器负责根据通信量、网络中的错误或者其他参数来进行正确地寻址，然后在它们到达的时候重新组合它们。</p>
 <h3 id="TCP-IP-通信传输"><a href="#TCP-IP-通信传输" class="headerlink" title="TCP/IP 通信传输"></a>TCP/IP 通信传输</h3><p><img src="https://raw.githubusercontent.com/Kyseme/MarkdownPhoto/master/res/tcp.png" alt="github"></p>
 <p>利用 TCP/IP 协议族进行网络通信时，会通过分层顺序与对方进行通信。发送端从应用层往下走，接收端则往应用层往上走。</p>
 <ul>
@@ -406,28 +405,19 @@
 <p>加密之后的数据破解难度就体现在密钥的长度上，密钥越长，破解难度也越大，但是运算的时间也越长，性能也就越差。相同安全强度下，对称密钥长度在最短，ECC次之，RSA密钥长度则最长。</p>
 <p>为了保证密钥的正确性，不被第三方恶意利用冒充身份窃取情报，可以使用由数字证书认证机构（CA，Certificate Authority）和其相关机关颁发的公开密钥证书。<br><img src="https://raw.githubusercontent.com/Kyseme/MarkdownPhoto/master/res/certifical.png" alt="image"></p>
 <h2 id="HTTPS工作模式"><a href="#HTTPS工作模式" class="headerlink" title="HTTPS工作模式"></a>HTTPS工作模式</h2><p>对于客户端和服务器来讲，应用层协议还是HTTP，只是加了一个SSL层来做加密解密的逻辑，对应用层来说是透明的，在网络上传输的都是加密的请求和加密的响应，从而达到安全传输的目的。</p>
-<p><img src="http://p1.pstatp.com/large/pgc-image/15276921029615e6c447ded" alt="image"></p>
-<p>这是SSL层在网络模型的位置，SSL属于应用层协议。接管应用层的数据加解密，并通过网络层发送给对方。</p>
-<p><img src="http://p3.pstatp.com/large/pgc-image/1527692102982e67c7bc915" alt="image"></p>
+<p><img src="http://p1.pstatp.com/large/pgc-image/15276921029615e6c447ded" alt="image"><br>这是SSL层在网络模型的位置，SSL属于应用层协议。接管应用层的数据加解密，并通过网络层发送给对方。<br><img src="http://p3.pstatp.com/large/pgc-image/1527692102982e67c7bc915" alt="image"></p>
 <h2 id="HTTP-2"><a href="#HTTP-2" class="headerlink" title="HTTP/2"></a>HTTP/2</h2><p>http/2主要特征</p>
 <ul>
-<li><p>二进制协议，可以做更多的优化；</p>
-</li>
-<li><p>多路复用，一定程度上解决了队头阻塞的问题，提高并发和总的加载时间</p>
-</li>
-<li><p>头部压缩，很多请求头或者响应头都没有必要重复传输浪费带宽，比如user-agent、cookie还有其他没有必要每次都传的头部在http2中都做了优化</p>
-</li>
-<li><p>安全，虽然RFC规定HTTP/2可以运行在明文之上，但目前所有浏览器都只支持https之上的http/2，所以是安全的。</p>
-</li>
+<li>二进制协议，可以做更多的优化；</li>
+<li>多路复用，一定程度上解决了队头阻塞的问题，提高并发和总的加载时间</li>
+<li>头部压缩，很多请求头或者响应头都没有必要重复传输浪费带宽，比如user-agent、cookie还有其他没有必要每次都传的头部在http2中都做了优化</li>
+<li>安全，虽然RFC规定HTTP/2可以运行在明文之上，但目前所有浏览器都只支持https之上的http/2，所以是安全的。</li>
 </ul>
 <p>开启http/2对网络传输的优化</p>
 <ul>
-<li><p>加载时间的提升，我们做了这么一个测试，一张大图片分割成几百个小图片，然后用http/1.1和http/2打开，http/1.1加载完所有小图片用了五六秒，但http/2加载完所有小图片只需要不到1s的时间，有5倍左右的提升，效果还是很明显的，具体提升百分之多少这得具体看具体的业务类型。</p>
-</li>
-<li><p>头部压缩有95%左右的提升，http/1.1的平均响应头大小有500个字节左右，而http/2的平均响应头大小只有20多个字节，提升非常大，所以http/2非常适合小图片小文件的业务类型，因为小文件的http头部比重较大，而http/2对头部的压缩做了非常好的优化。</p>
-</li>
-<li><p>服务器QPS的性能有60%多的提升，这是因为http/2的连接复用和多路复用机制，可以处理更多的并发请求。</p>
-</li>
+<li>加载时间的提升，我们做了这么一个测试，一张大图片分割成几百个小图片，然后用http/1.1和http/2打开，http/1.1加载完所有小图片用了五六秒，但http/2加载完所有小图片只需要不到1s的时间，有5倍左右的提升，效果还是很明显的，具体提升百分之多少这得具体看具体的业务类型。</li>
+<li>头部压缩有95%左右的提升，http/1.1的平均响应头大小有500个字节左右，而http/2的平均响应头大小只有20多个字节，提升非常大，所以http/2非常适合小图片小文件的业务类型，因为小文件的http头部比重较大，而http/2对头部的压缩做了非常好的优化。</li>
+<li>服务器QPS的性能有60%多的提升，这是因为http/2的连接复用和多路复用机制，可以处理更多的并发请求。</li>
 </ul>
 <p>参考文章</p>
 <ul>
@@ -454,7 +444,7 @@
   <p><span>本文标题:</span><a href="/2018/07/14/https/">https和http传输</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 kyseme 的个人博客">kyseme</a></p>
   <p><span>发布时间:</span>2018年07月14日 - 10:07</p>
-  <p><span>最后更新:</span>2018年07月14日 - 18:07</p>
+  <p><span>最后更新:</span>2018年07月19日 - 21:07</p>
   <!-- <p><span>原始链接:</span><a href="/2018/07/14/https/" title="https和http传输">http://yoursite.com/2018/07/14/https/</a>
    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2018/07/14/https/"  aria-label="复制成功！"></i></span>
    </p>-->
@@ -595,7 +585,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -606,7 +596,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -617,7 +607,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -650,7 +640,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP-IP协议"><span class="nav-number">1.</span> <span class="nav-text">TCP/IP协议</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#IP：计算机之间的通信"><span class="nav-number">1.1.</span> <span class="nav-text">IP：计算机之间的通信</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-应用程序之间的通信"><span class="nav-number">1.2.</span> <span class="nav-text">TCP : 应用程序之间的通信</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-IP-通信传输"><span class="nav-number">1.3.</span> <span class="nav-text">TCP/IP 通信传输</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTPS-HTTP-加密-认证-完整性保护"><span class="nav-number">2.</span> <span class="nav-text">HTTPS  = HTTP+ 加密 + 认证 + 完整性保护</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTPS加密算法"><span class="nav-number">2.1.</span> <span class="nav-text">HTTPS加密算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTPS数字签名"><span class="nav-number">2.2.</span> <span class="nav-text">HTTPS数字签名</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTPS工作模式"><span class="nav-number">3.</span> <span class="nav-text">HTTPS工作模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP-2"><span class="nav-number">4.</span> <span class="nav-text">HTTP/2</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP-IP协议"><span class="nav-number">1.</span> <span class="nav-text">TCP/IP协议</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#IP：计算机之间的通信"><span class="nav-number">1.1.</span> <span class="nav-text">IP：计算机之间的通信</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP：应用程序之间的通信"><span class="nav-number">1.2.</span> <span class="nav-text">TCP：应用程序之间的通信</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-IP-通信传输"><span class="nav-number">1.3.</span> <span class="nav-text">TCP/IP 通信传输</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTPS-HTTP-加密-认证-完整性保护"><span class="nav-number">2.</span> <span class="nav-text">HTTPS  = HTTP+ 加密 + 认证 + 完整性保护</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTPS加密算法"><span class="nav-number">2.1.</span> <span class="nav-text">HTTPS加密算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTPS数字签名"><span class="nav-number">2.2.</span> <span class="nav-text">HTTPS数字签名</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTPS工作模式"><span class="nav-number">3.</span> <span class="nav-text">HTTPS工作模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP-2"><span class="nav-number">4.</span> <span class="nav-text">HTTP/2</span></a></li></ol></div>
             
 
           </div>
