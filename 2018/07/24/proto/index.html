@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="牛客" />
+  <meta name="keywords" content="js," />
 
 
 
@@ -79,18 +79,21 @@
 
 
 
-<meta name="description" content="刷题目小结">
-<meta name="keywords" content="牛客">
+<meta name="description" content="首先简单了解一下原型和原型链，看下面的图1234567//Foo 构造函数function Foo()&amp;#123;    &amp;#125;var f = new Foo(); //函数实例化f.__proto__ == Foo.prototype; //f对象的隐式原型指向构造函数Foo的显式原型 proto和prototype__proto__每个JS对象一定对应一个原型对象，并从原型对象继承属性">
+<meta name="keywords" content="js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="牛客刷题之百度">
-<meta property="og:url" content="http://yoursite.com/2018/07/20/baidu/index.html">
+<meta property="og:title" content="深入理解javascript原型">
+<meta property="og:url" content="http://yoursite.com/2018/07/24/proto/index.html">
 <meta property="og:site_name" content="kyseme">
-<meta property="og:description" content="刷题目小结">
+<meta property="og:description" content="首先简单了解一下原型和原型链，看下面的图1234567//Foo 构造函数function Foo()&amp;#123;    &amp;#125;var f = new Foo(); //函数实例化f.__proto__ == Foo.prototype; //f对象的隐式原型指向构造函数Foo的显式原型 proto和prototype__proto__每个JS对象一定对应一个原型对象，并从原型对象继承属性">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-20T10:37:32.000Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/Kyseme/MarkdownPhoto/master/res/obj-proto.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Kyseme/MarkdownPhoto/master/res/jsobj_full.jpg">
+<meta property="og:updated_time" content="2018-07-24T10:04:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="牛客刷题之百度">
-<meta name="twitter:description" content="刷题目小结">
+<meta name="twitter:title" content="深入理解javascript原型">
+<meta name="twitter:description" content="首先简单了解一下原型和原型链，看下面的图1234567//Foo 构造函数function Foo()&amp;#123;    &amp;#125;var f = new Foo(); //函数实例化f.__proto__ == Foo.prototype; //f对象的隐式原型指向构造函数Foo的显式原型 proto和prototype__proto__每个JS对象一定对应一个原型对象，并从原型对象继承属性">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Kyseme/MarkdownPhoto/master/res/obj-proto.png">
 
 
 
@@ -120,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/20/baidu/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/24/proto/"/>
 
 
 
 
 
-  <title>牛客刷题之百度 | kyseme</title>
+  <title>深入理解javascript原型 | kyseme</title>
   
 
 
@@ -253,7 +256,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/20/baidu/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/24/proto/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="kyseme">
@@ -270,7 +273,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">牛客刷题之百度</h1>
+          <h1 class="post-title" itemprop="name headline">深入理解javascript原型</h1>
         
 
         <div class="post-meta">
@@ -282,8 +285,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-20T09:42:11+08:00">
-                2018-07-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-24T17:52:58+08:00">
+                2018-07-24
               </time>
             
 
@@ -305,8 +308,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/牛客/" itemprop="url" rel="index">
-                    <span itemprop="name">牛客</span>
+                  <a href="/categories/js/" itemprop="url" rel="index">
+                    <span itemprop="name">js</span>
                   </a>
                 </span>
 
@@ -322,7 +325,7 @@
 
           
           
-             <span id="/2018/07/20/baidu/" class="leancloud_visitors" data-flag-title="牛客刷题之百度">
+             <span id="/2018/07/24/proto/" class="leancloud_visitors" data-flag-title="深入理解javascript原型">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -358,15 +361,24 @@
       
 
       
-        <p>刷题目小结<br><a id="more"></a></p>
-<h3 id="当一个数字前置为0，它被视为8进制"><a href="#当一个数字前置为0，它被视为8进制" class="headerlink" title="当一个数字前置为0，它被视为8进制"></a>当一个数字前置为0，它被视为8进制</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">010</span>) <span class="comment">//8</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">m</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params">n</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> n+m++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> add1 = add(<span class="number">070</span>);</span><br><span class="line"><span class="built_in">console</span>.log(add1(<span class="number">10</span>));<span class="comment">//64</span></span><br></pre></td></tr></table></figure>
-<h3 id="有关arguments"><a href="#有关arguments" class="headerlink" title="有关arguments"></a>有关arguments</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> func = <span class="function"><span class="keyword">function</span>(<span class="params">m, n</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">arguments</span>);</span><br><span class="line">    <span class="built_in">arguments</span>[<span class="number">0</span>] = <span class="number">3</span>;</span><br><span class="line">    <span class="built_in">arguments</span>[<span class="number">1</span>] = <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">return</span> m + n;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(func(<span class="number">1</span>, <span class="number">1</span>));<span class="comment">//5</span></span><br></pre></td></tr></table></figure>
-<h3 id="分页组件"><a href="#分页组件" class="headerlink" title="分页组件"></a>分页组件</h3><p>分页组件是web开发中常见的组件，请完成pagination函数，在id为jsPagination的DOM元素中完成分页的显示部分，需求如下<br>1、最多连续显示5页，居中高亮显示current页（如demo1所示)<br>2、total为0时，隐藏整个元素（如demo2所示）<br>3、如果total&lt;=5，则显示全部页数，隐藏“首页”和“末页”元素（如demo3所示）<br>4、当current居中不足5页，向后(前)补足5页，隐藏“首页”(“末页”)元素(如demo4和demo5所示)<br>5、total、current均为正整数，1 &lt;= current &lt;= total </p>
-<h3 id="最大子序列"><a href="#最大子序列" class="headerlink" title="最大子序列"></a>最大子序列</h3><p>对于字符串x和y, 如果擦除x中的某些字母(有可能全擦掉或者都不擦)能够得到y,我们就称y是x的子序列。例如.”ncd”是”nowcoder”的子序列,而”xt”不是。<br>现在对于给定的一个字符串s,请计算出字典序最大的s的子序列。<br>输入描述:<br>输入包括一行,一个字符串s,字符串s长度length(1 ≤ length ≤ 50).<br>s中每个字符都是小写字母</p>
-<p>输出描述:<br>输出一个字符串,即字典序最大的s的子序列。</p>
-<p>输入例子1:<br>test</p>
-<p>输出例子1:<br>tt</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">findMax</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> len = str.length;</span><br><span class="line">    <span class="comment">// let max = str[len - 1];</span></span><br><span class="line">    <span class="comment">// let ans = [max];</span></span><br><span class="line">    <span class="keyword">let</span> ans = [str[len - <span class="number">1</span>]];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = len - <span class="number">2</span>; i &gt;=<span class="number">0</span>; i--) &#123;</span><br><span class="line">        <span class="keyword">if</span> (str[i] &gt;= ans[<span class="number">0</span>]) &#123;</span><br><span class="line">            ans.unshift(str[i]);</span><br><span class="line">            <span class="comment">// max = str[i];</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans.join(<span class="string">''</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <a id="more"></a>
+<p>首先简单了解一下原型和原型链，看下面的图<br><img src="https://raw.githubusercontent.com/Kyseme/MarkdownPhoto/master/res/obj-proto.png" alt="原型"><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Foo 构造函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> f = <span class="keyword">new</span> Foo(); <span class="comment">//函数实例化</span></span><br><span class="line">f.__proto__ == Foo.prototype; <span class="comment">//f对象的隐式原型指向构造函数Foo的显式原型</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="proto和prototype"><a href="#proto和prototype" class="headerlink" title="proto和prototype"></a><strong>proto</strong>和prototype</h3><p><code>__proto__</code><br>每个JS对象一定对应一个原型对象，并从原型对象继承属性和方法，也成为对象的隐式原型。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> one = &#123;<span class="attr">x</span>: <span class="number">1</span>&#125;;</span><br><span class="line"><span class="keyword">var</span> two = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">one.__proto__ === <span class="built_in">Object</span>.prototype <span class="comment">// true</span></span><br><span class="line">two.__proto__ === <span class="built_in">Object</span>.prototype <span class="comment">// true</span></span><br><span class="line">one.toString === one.__proto__.toString <span class="comment">// true</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="prototype"><a href="#prototype" class="headerlink" title="prototype"></a>prototype</h3><p>首先来说说prototype属性，不像每个对象都有<strong>proto</strong>属性来标识自己所继承的原型，只有函数才有prototype属性。也称为函数的显式原型。<br>当你创建函数时，JS会为这个函数自动添加prototype属性,值是一个有 constructor 属性的对象，不是空对象。而一旦你把这个函数当作构造函数（constructor）调用（即通过new关键字调用），那么JS就会帮你创建该构造函数的实例，实例继承构造函数prototype的所有属性和方法（实例通过设置自己的<strong>proto</strong>指向承构造函数的prototype来实现这种继承）</p>
+<p>构造函数，通过prototype来存储要共享的属性和方法，也可以设置prototype指向现存的对象来继承该对象。</p>
+<p>对象的<strong>proto</strong>指向自己构造函数的prototype。obj.<strong>proto</strong>.<strong>proto</strong>…的原型链由此产生，包括我们的操作符instanceof正是通过探测obj.<strong>proto</strong>.<strong>proto</strong>… === Constructor.prototype来验证obj是否是Constructor的实例。</p>
+<h3 id="更深一步的讨论"><a href="#更深一步的讨论" class="headerlink" title="更深一步的讨论"></a>更深一步的讨论</h3><p>JS是单继承的，Object.prototype是原型链的顶端，所有对象从它继承了包括toString等等方法和属性。</p>
+<p>Object本身是构造函数，继承了Function.prototype;Function也是对象，继承了Object.prototype。这里就有一个<em>鸡和蛋</em>的问题：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span> <span class="keyword">instanceof</span> <span class="built_in">Function</span> <span class="comment">// true</span></span><br><span class="line"><span class="built_in">Function</span> <span class="keyword">instanceof</span> <span class="built_in">Object</span> <span class="comment">// true</span></span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>Function本身就是函数，Function.<strong>proto</strong>是标准的内置对象Function.prototype。<br>Function.prototype.<strong>proto</strong>是标准的内置对象Object.prototype。</p>
+</blockquote>
+<p>通过图片可以得出<br><img src="https://raw.githubusercontent.com/Kyseme/MarkdownPhoto/master/res/jsobj_full.jpg" alt="proto"></p>
+<ul>
+<li>Function.prototype和Function.<strong>proto</strong>都指向Function.prototype，这就是鸡和蛋的问题怎么出现的。</li>
+<li>Object.prototype.<strong>proto</strong> === null，说明原型链到Object.prototype终止。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Function</span>.prototype ==== <span class="built_in">Function</span>.__proto__; <span class="comment">//true</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">add.prototype.__proto__ ===  <span class="built_in">Object</span>.prototype; <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
       
     </div>
     
@@ -388,9 +400,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/牛客/" rel="tag"><i class="fa fa-tag"></i> 牛客</a>
-          
-            <a href="/tags/百度/" rel="tag"><i class="fa fa-tag"></i> 百度</a>
+            <a href="/tags/js/" rel="tag"><i class="fa fa-tag"></i> js</a>
           
         </div>
       
@@ -403,8 +413,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/15/security/" rel="next" title="security">
-                <i class="fa fa-chevron-left"></i> security
+              <a href="/2018/07/21/cssSummary/" rel="next" title="cssSummary">
+                <i class="fa fa-chevron-left"></i> cssSummary
               </a>
             
           </div>
@@ -412,10 +422,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/20/banner/" rel="prev" title="banner">
-                banner <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -551,7 +557,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#当一个数字前置为0，它被视为8进制"><span class="nav-number">1.</span> <span class="nav-text">当一个数字前置为0，它被视为8进制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有关arguments"><span class="nav-number">2.</span> <span class="nav-text">有关arguments</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分页组件"><span class="nav-number">3.</span> <span class="nav-text">分页组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最大子序列"><span class="nav-number">4.</span> <span class="nav-text">最大子序列</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#proto和prototype"><span class="nav-number">1.</span> <span class="nav-text">proto和prototype</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#prototype"><span class="nav-number">2.</span> <span class="nav-text">prototype</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更深一步的讨论"><span class="nav-number">3.</span> <span class="nav-text">更深一步的讨论</span></a></li></ol></div>
             
 
           </div>
