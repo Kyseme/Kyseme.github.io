@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/07/21/cssSummary/</loc>
+    <lastmod>2018-07-22T02:55:44.170Z</lastmod>
+    <data>
+        <display>
+        <title>cssSummary</title>
+        <pubTime>2018-07-21T09:11:23.000Z</pubTime>
+        
+        <tag>css</tag>
+         
+         
+           
+             
+              <breadCrumb title="css" url="http://yoursite.com/categories/css/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/07/20/baidu/</loc>
-    <lastmod>2018-07-20T10:36:28.374Z</lastmod>
+    <lastmod>2018-07-20T10:37:33.402Z</lastmod>
     <data>
         <display>
         <title>牛客刷题之百度</title>
