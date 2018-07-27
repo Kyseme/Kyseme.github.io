@@ -79,20 +79,20 @@
 
 
 
-<meta name="description" content="首先简单了解一下原型和原型链，看下面的图1234567//Foo 构造函数function Foo()&amp;#123;    &amp;#125;var f = new Foo(); //函数实例化f.__proto__ == Foo.prototype; //f对象的隐式原型指向构造函数Foo的显式原型 proto和prototype__proto__每个JS对象一定对应一个原型对象，并从原型对象继承属性">
+<meta name="description" content="首先简单了解一下原型和原型链，看下面的图">
 <meta name="keywords" content="js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="深入理解javascript原型">
 <meta property="og:url" content="http://yoursite.com/2018/07/24/proto/index.html">
 <meta property="og:site_name" content="kyseme">
-<meta property="og:description" content="首先简单了解一下原型和原型链，看下面的图1234567//Foo 构造函数function Foo()&amp;#123;    &amp;#125;var f = new Foo(); //函数实例化f.__proto__ == Foo.prototype; //f对象的隐式原型指向构造函数Foo的显式原型 proto和prototype__proto__每个JS对象一定对应一个原型对象，并从原型对象继承属性">
+<meta property="og:description" content="首先简单了解一下原型和原型链，看下面的图">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://raw.githubusercontent.com/Kyseme/MarkdownPhoto/master/res/obj-proto.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Kyseme/MarkdownPhoto/master/res/jsobj_full.jpg">
-<meta property="og:updated_time" content="2018-07-24T10:04:38.000Z">
+<meta property="og:updated_time" content="2018-07-27T07:50:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深入理解javascript原型">
-<meta name="twitter:description" content="首先简单了解一下原型和原型链，看下面的图1234567//Foo 构造函数function Foo()&amp;#123;    &amp;#125;var f = new Foo(); //函数实例化f.__proto__ == Foo.prototype; //f对象的隐式原型指向构造函数Foo的显式原型 proto和prototype__proto__每个JS对象一定对应一个原型对象，并从原型对象继承属性">
+<meta name="twitter:description" content="首先简单了解一下原型和原型链，看下面的图">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/Kyseme/MarkdownPhoto/master/res/obj-proto.png">
 
 
@@ -361,8 +361,8 @@
       
 
       
-        <a id="more"></a>
-<p>首先简单了解一下原型和原型链，看下面的图<br><img src="https://raw.githubusercontent.com/Kyseme/MarkdownPhoto/master/res/obj-proto.png" alt="原型"><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Foo 构造函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> f = <span class="keyword">new</span> Foo(); <span class="comment">//函数实例化</span></span><br><span class="line">f.__proto__ == Foo.prototype; <span class="comment">//f对象的隐式原型指向构造函数Foo的显式原型</span></span><br></pre></td></tr></table></figure></p>
+        <p>首先简单了解一下原型和原型链，看下面的图<br><a id="more"></a></p>
+<p><img src="https://raw.githubusercontent.com/Kyseme/MarkdownPhoto/master/res/obj-proto.png" alt="原型"><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Foo 构造函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> f = <span class="keyword">new</span> Foo(); <span class="comment">//函数实例化</span></span><br><span class="line">f.__proto__ == Foo.prototype; <span class="comment">//f对象的隐式原型指向构造函数Foo的显式原型</span></span><br></pre></td></tr></table></figure></p>
 <h3 id="proto和prototype"><a href="#proto和prototype" class="headerlink" title="proto和prototype"></a><strong>proto</strong>和prototype</h3><p><code>__proto__</code><br>每个JS对象一定对应一个原型对象，并从原型对象继承属性和方法，也成为对象的隐式原型。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> one = &#123;<span class="attr">x</span>: <span class="number">1</span>&#125;;</span><br><span class="line"><span class="keyword">var</span> two = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">one.__proto__ === <span class="built_in">Object</span>.prototype <span class="comment">// true</span></span><br><span class="line">two.__proto__ === <span class="built_in">Object</span>.prototype <span class="comment">// true</span></span><br><span class="line">one.toString === one.__proto__.toString <span class="comment">// true</span></span><br></pre></td></tr></table></figure></p>
 <h3 id="prototype"><a href="#prototype" class="headerlink" title="prototype"></a>prototype</h3><p>首先来说说prototype属性，不像每个对象都有<strong>proto</strong>属性来标识自己所继承的原型，只有函数才有prototype属性。也称为函数的显式原型。<br>当你创建函数时，JS会为这个函数自动添加prototype属性,值是一个有 constructor 属性的对象，不是空对象。而一旦你把这个函数当作构造函数（constructor）调用（即通过new关键字调用），那么JS就会帮你创建该构造函数的实例，实例继承构造函数prototype的所有属性和方法（实例通过设置自己的<strong>proto</strong>指向承构造函数的prototype来实现这种继承）</p>
 <p>构造函数，通过prototype来存储要共享的属性和方法，也可以设置prototype指向现存的对象来继承该对象。</p>
@@ -422,6 +422,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/27/pailie/" rel="prev" title="pailie">
+                pailie <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -502,7 +506,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -513,7 +517,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -524,7 +528,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
