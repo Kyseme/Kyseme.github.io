@@ -4,11 +4,53 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/07/27/pailie/</loc>
-    <lastmod>2018-07-27T07:52:21.000Z</lastmod>
+    <loc>http://yoursite.com/2018/07/31/indexDB/</loc>
+    <lastmod>2018-07-31T09:10:55.000Z</lastmod>
     <data>
         <display>
-        <title>pailie</title>
+        <title>初探indexDB</title>
+        <pubTime>2018-07-31T09:04:38.000Z</pubTime>
+        
+        <tag>html</tag>
+         
+        <tag>indexDB</tag>
+         
+         
+           
+             
+              <breadCrumb title="html" url="http://yoursite.com/categories/html/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/07/21/cssSummary/</loc>
+    <lastmod>2018-07-29T09:59:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>cssSummary</title>
+        <pubTime>2018-07-21T09:11:23.000Z</pubTime>
+        
+        <tag>css</tag>
+         
+         
+           
+             
+              <breadCrumb title="css" url="http://yoursite.com/categories/css/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/07/27/pailie/</loc>
+    <lastmod>2018-07-27T08:15:23.000Z</lastmod>
+    <data>
+        <display>
+        <title>全排列</title>
         <pubTime>2018-07-27T07:50:03.000Z</pubTime>
         
         <tag>算法</tag>
@@ -17,6 +59,26 @@
            
              
               <breadCrumb title="算法" url="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/07/27/dom/</loc>
+    <lastmod>2018-07-27T08:06:50.000Z</lastmod>
+    <data>
+        <display>
+        <title>dom</title>
+        <pubTime>2018-07-27T08:05:40.000Z</pubTime>
+        
+        <tag>dom</tag>
+         
+         
+           
+             
+              <breadCrumb title="html" url="http://yoursite.com/categories/html/"/>
           
         </display>
     </data>
@@ -37,26 +99,6 @@
            
              
               <breadCrumb title="js" url="http://yoursite.com/categories/js/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/07/21/cssSummary/</loc>
-    <lastmod>2018-07-22T02:55:44.000Z</lastmod>
-    <data>
-        <display>
-        <title>cssSummary</title>
-        <pubTime>2018-07-21T09:11:23.000Z</pubTime>
-        
-        <tag>css</tag>
-         
-         
-           
-             
-              <breadCrumb title="css" url="http://yoursite.com/categories/css/"/>
           
         </display>
     </data>
