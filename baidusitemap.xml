@@ -4,30 +4,8 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/08/05/protoExtend/</loc>
-    <lastmod>2018-08-05T09:00:34.000Z</lastmod>
-    <data>
-        <display>
-        <title>JavaScript深入之继承的多种方式</title>
-        <pubTime>2018-08-05T08:33:58.000Z</pubTime>
-        
-        <tag>js</tag>
-         
-        <tag>继承</tag>
-         
-         
-           
-             
-              <breadCrumb title="js" url="http://yoursite.com/categories/js/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2018/08/05/pixel/</loc>
-    <lastmod>2018-08-05T08:52:35.000Z</lastmod>
+    <lastmod>2018-08-05T09:09:20.000Z</lastmod>
     <data>
         <display>
         <title>移动端适配问题</title>
@@ -41,6 +19,28 @@
            
              
               <breadCrumb title="css" url="http://yoursite.com/categories/css/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/08/05/protoExtend/</loc>
+    <lastmod>2018-08-05T09:04:03.000Z</lastmod>
+    <data>
+        <display>
+        <title>JavaScript深入之继承的多种方式</title>
+        <pubTime>2018-08-05T08:33:58.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+        <tag>继承</tag>
+         
+         
+           
+             
+              <breadCrumb title="js" url="http://yoursite.com/categories/js/"/>
           
         </display>
     </data>
