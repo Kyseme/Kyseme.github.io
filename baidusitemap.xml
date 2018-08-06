@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/08/06/hybird/</loc>
+    <lastmod>2018-08-06T08:22:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>浅谈hybrid</title>
+        <pubTime>2018-08-06T08:12:32.000Z</pubTime>
+        
+        <tag>hybrid</tag>
+         
+         
+           
+             
+              <breadCrumb title="移动开发" url="http://yoursite.com/categories/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/08/06/commonjs/</loc>
     <lastmod>2018-08-06T08:05:12.000Z</lastmod>
     <data>
