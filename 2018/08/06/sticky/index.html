@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="js,原型," />
+  <meta name="keywords" content="sticky,postion," />
 
 
 
@@ -79,21 +79,18 @@
 
 
 
-<meta name="description" content="首先简单了解一下原型和原型链，看下面的图">
-<meta name="keywords" content="js,原型">
+<meta name="description" content="position之sticky">
+<meta name="keywords" content="sticky,postion">
 <meta property="og:type" content="article">
-<meta property="og:title" content="深入理解javascript原型">
-<meta property="og:url" content="http://yoursite.com/2018/07/24/proto/index.html">
+<meta property="og:title" content="sticky">
+<meta property="og:url" content="http://yoursite.com/2018/08/06/sticky/index.html">
 <meta property="og:site_name" content="kyseme">
-<meta property="og:description" content="首先简单了解一下原型和原型链，看下面的图">
+<meta property="og:description" content="position之sticky">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://raw.githubusercontent.com/Kyseme/MarkdownPhoto/master/res/obj-proto.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Kyseme/MarkdownPhoto/master/res/jsobj_full.jpg">
-<meta property="og:updated_time" content="2018-08-05T08:42:21.000Z">
+<meta property="og:updated_time" content="2018-08-06T11:08:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="深入理解javascript原型">
-<meta name="twitter:description" content="首先简单了解一下原型和原型链，看下面的图">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/Kyseme/MarkdownPhoto/master/res/obj-proto.png">
+<meta name="twitter:title" content="sticky">
+<meta name="twitter:description" content="position之sticky">
 
 
 
@@ -123,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/24/proto/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/06/sticky/"/>
 
 
 
 
 
-  <title>深入理解javascript原型 | kyseme</title>
+  <title>sticky | kyseme</title>
   
 
 
@@ -256,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/24/proto/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/06/sticky/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="kyseme">
@@ -273,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">深入理解javascript原型</h1>
+          <h1 class="post-title" itemprop="name headline">sticky</h1>
         
 
         <div class="post-meta">
@@ -285,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-24T17:52:58+08:00">
-                2018-07-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-06T18:51:15+08:00">
+                2018-08-06
               </time>
             
 
@@ -308,8 +305,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/js/" itemprop="url" rel="index">
-                    <span itemprop="name">js</span>
+                  <a href="/categories/css/" itemprop="url" rel="index">
+                    <span itemprop="name">css</span>
                   </a>
                 </span>
 
@@ -325,7 +322,7 @@
 
           
           
-             <span id="/2018/07/24/proto/" class="leancloud_visitors" data-flag-title="深入理解javascript原型">
+             <span id="/2018/08/06/sticky/" class="leancloud_visitors" data-flag-title="sticky">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -347,6 +344,10 @@
           
 
           
+              <div class="post-description">
+                  position之sticky
+              </div>
+          
 
         </div>
       </header>
@@ -361,23 +362,30 @@
       
 
       
-        <p>首先简单了解一下原型和原型链，看下面的图<br><a id="more"></a></p>
-<p><img src="https://raw.githubusercontent.com/Kyseme/MarkdownPhoto/master/res/obj-proto.png" alt="原型"><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Foo 构造函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> f = <span class="keyword">new</span> Foo(); <span class="comment">//函数实例化</span></span><br><span class="line">f.__proto__ == Foo.prototype; <span class="comment">//f对象的隐式原型指向构造函数Foo的显式原型</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="proto和prototype"><a href="#proto和prototype" class="headerlink" title="proto和prototype"></a><strong>proto</strong>和prototype</h3><p><code>__proto__</code><br>每个JS对象一定对应一个原型对象，并从原型对象继承属性和方法，也成为对象的隐式原型。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> one = &#123;<span class="attr">x</span>: <span class="number">1</span>&#125;;</span><br><span class="line"><span class="keyword">var</span> two = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">one.__proto__ === <span class="built_in">Object</span>.prototype <span class="comment">// true</span></span><br><span class="line">two.__proto__ === <span class="built_in">Object</span>.prototype <span class="comment">// true</span></span><br><span class="line">one.toString === one.__proto__.toString <span class="comment">// true</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="prototype"><a href="#prototype" class="headerlink" title="prototype"></a>prototype</h3><p>首先来说说prototype属性，不像每个对象都有<strong>proto</strong>属性来标识自己所继承的原型，只有函数才有prototype属性。也称为函数的显式原型。<br>当你创建函数时，JS会为这个函数自动添加prototype属性,值是一个有 constructor 属性的对象，不是空对象。而一旦你把这个函数当作构造函数（constructor）调用（即通过new关键字调用），那么JS就会帮你创建该构造函数的实例，实例继承构造函数prototype的所有属性和方法（实例通过设置自己的<strong>proto</strong>指向承构造函数的prototype来实现这种继承）</p>
-<p>构造函数，通过prototype来存储要共享的属性和方法，也可以设置prototype指向现存的对象来继承该对象。</p>
-<p>对象的<strong>proto</strong>指向自己构造函数的prototype。obj.<strong>proto</strong>.<strong>proto</strong>…的原型链由此产生，包括我们的操作符instanceof正是通过探测obj.<strong>proto</strong>.<strong>proto</strong>… === Constructor.prototype来验证obj是否是Constructor的实例。</p>
-<h3 id="更深一步的讨论"><a href="#更深一步的讨论" class="headerlink" title="更深一步的讨论"></a>更深一步的讨论</h3><p>JS是单继承的，Object.prototype是原型链的顶端，所有对象从它继承了包括toString等等方法和属性。</p>
-<p>Object本身是构造函数，继承了Function.prototype;Function也是对象，继承了Object.prototype。这里就有一个<em>鸡和蛋</em>的问题：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span> <span class="keyword">instanceof</span> <span class="built_in">Function</span> <span class="comment">// true</span></span><br><span class="line"><span class="built_in">Function</span> <span class="keyword">instanceof</span> <span class="built_in">Object</span> <span class="comment">// true</span></span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>Function本身就是函数，Function.<strong>proto</strong>是标准的内置对象Function.prototype。<br>Function.prototype.<strong>proto</strong>是标准的内置对象Object.prototype。</p>
-</blockquote>
-<p>通过图片可以得出<br><img src="https://raw.githubusercontent.com/Kyseme/MarkdownPhoto/master/res/jsobj_full.jpg" alt="proto"></p>
+        <p>position的属性 static | relative | absolute | sticky | fixed</p>
 <ul>
-<li>Function.prototype和Function.<strong>proto</strong>都指向Function.prototype，这就是鸡和蛋的问题怎么出现的。</li>
-<li>Object.prototype.<strong>proto</strong> === null，说明原型链到Object.prototype终止。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Function</span>.prototype ==== <span class="built_in">Function</span>.__proto__; <span class="comment">//true</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">add.prototype.__proto__ ===  <span class="built_in">Object</span>.prototype; <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+<li><p>static<br>该关键字指定元素使用正常的布局行为，即元素在文档常规流中当前的布局位置。此时 top, right, bottom, left 和 z-index 属性无效。</p>
+</li>
+<li><p>relative<br>该关键字下，元素先放置在未添加定位时的位置，再在不改变页面布局的前提下调整元素位置（因此会在此元素未添加定位时所在位置留下空白）。position:relative 对 table-*-group, table-row, table-column, table-cell, table-caption 元素无效。</p>
+</li>
+<li><p>absolute<br>不为元素预留空间，通过指定元素相对于最近的非 static 定位祖先元素的偏移，来确定元素位置。绝对定位的元素可以设置外边距（margins），且不会与其他边距合并。</p>
+</li>
+<li><p>fixed<br>不为元素预留空间，而是通过指定元素相对于屏幕视口（viewport）的位置来指定元素位置。元素的位置在屏幕滚动时不会改变。打印时，元素会出现在的每页的固定位置。fixed 属性会创建新的层叠上下文。当元素祖先的 transform  属性非 none 时，容器由视口改为该祖先。</p>
+</li>
+<li><p>sticky<br>盒位置根据正常流计算(这称为正常流动中的位置)，然后相对于该元素在流中的 flow root（BFC）和 containing block（最近的块级祖先元素）定位。在所有情况下（即便被定位元素为 table 时），该元素定位均不对后续元素造成影响。当元素 B 被粘性定位时，后续元素的位置仍按照 B 未定位时的位置来确定。position: sticky 对 table 元素的效果与 position: relative 相同。</p>
 </li>
 </ul>
+<p>粘性定位可以被认为是相对定位和固定定位的混合。元素在跨越特定阈值前为相对定位，之后为固定定位。</p>
+<p>如下<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">*&#123;</span></span><br><span class="line"><span class="undefined">  box-sizing: border-box;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">dl &#123;</span></span><br><span class="line"><span class="undefined">  margin: 0;</span></span><br><span class="line"><span class="undefined">  padding: 24px 0 0 0;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">dt &#123;</span></span><br><span class="line"><span class="css">  <span class="selector-tag">background</span>: <span class="selector-id">#B8C1C8</span>;</span></span><br><span class="line"><span class="css">  <span class="selector-tag">border-bottom</span>: 1<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#989EA4</span>;</span></span><br><span class="line"><span class="css">  <span class="selector-tag">border-top</span>: 1<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#717D85</span>;</span></span><br><span class="line"><span class="css">  <span class="selector-tag">color</span>: <span class="selector-id">#FFF</span>;</span></span><br><span class="line"><span class="undefined">  font: bold 18px/21px Helvetica, Arial, sans-serif;</span></span><br><span class="line"><span class="undefined">  margin: 0;</span></span><br><span class="line"><span class="undefined">  padding: 2px 0 0 12px;</span></span><br><span class="line"><span class="undefined">  position: -webkit-sticky;</span></span><br><span class="line"><span class="undefined">  position: sticky;</span></span><br><span class="line"><span class="undefined">  top: -1px;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">dd &#123;</span></span><br><span class="line"><span class="undefined">  font: bold 20px/45px Helvetica, Arial, sans-serif;</span></span><br><span class="line"><span class="undefined">  margin: 0;</span></span><br><span class="line"><span class="undefined">  padding: 0 0 0 12px;</span></span><br><span class="line"><span class="undefined">  white-space: nowrap;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">dd + dd &#123;</span></span><br><span class="line"><span class="css">  <span class="selector-tag">border-top</span>: 1<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#CCC</span></span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dl</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dt</span>&gt;</span>A<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>Andrew W.K.<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>Apparat<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>Arcade Fire<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>At The Drive-In<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>Aziz Ansari<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dl</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dt</span>&gt;</span>C<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>Chromeo<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>Common<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>Converge<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>Crystal Castles<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>Cursive<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dl</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dt</span>&gt;</span>E<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>Explosions In The Sky<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dl</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dt</span>&gt;</span>T<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>Ted Leo  The Pharmacists<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>T-Pain<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>Thrice<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>TV On The Radio<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>Two Gallants<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><a href="https://codepen.io/kyseme/pen/EppGdd" target="_blank" rel="noopener">codepen演示地址</a></p>
+<p><strong>生效条件</strong></p>
+<ul>
+<li>父元素不能<code>overflow:hidden</code>或者<code>overflow:auto</code>属性。</li>
+<li>必须指定top、bottom、left、right4个值之一，否则只会处于相对定位</li>
+<li>父元素的高度不能低于sticky元素的高度</li>
+<li>sticky元素仅在其父元素内生效</li>
+</ul>
+<p><strong>兼容性</strong><br>在caniuse中查看兼容性<a href="https://caniuse.com/#search=sticky" target="_blank" rel="noopener">sticky兼容性</a><br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">position</span>: <span class="selector-tag">-webkit-sticky</span>;</span><br><span class="line"><span class="selector-tag">position</span>: <span class="selector-tag">-moz--sticky</span>;</span><br><span class="line"><span class="selector-tag">position</span>: <span class="selector-tag">sticky</span>;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -400,9 +408,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/js/" rel="tag"><i class="fa fa-tag"></i> js</a>
+            <a href="/tags/sticky/" rel="tag"><i class="fa fa-tag"></i> sticky</a>
           
-            <a href="/tags/原型/" rel="tag"><i class="fa fa-tag"></i> 原型</a>
+            <a href="/tags/postion/" rel="tag"><i class="fa fa-tag"></i> postion</a>
           
         </div>
       
@@ -415,8 +423,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/21/cssSummary/" rel="next" title="cssSummary">
-                <i class="fa fa-chevron-left"></i> cssSummary
+              <a href="/2018/08/06/hybird/" rel="next" title="浅谈hybrid">
+                <i class="fa fa-chevron-left"></i> 浅谈hybrid
               </a>
             
           </div>
@@ -425,8 +433,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/27/pailie/" rel="prev" title="全排列">
-                全排列 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/10/treeTreverse/" rel="prev" title="深度遍历和广度遍历">
+                深度遍历和广度遍历 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -479,17 +487,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -553,22 +552,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#proto和prototype"><span class="nav-number">1.</span> <span class="nav-text">proto和prototype</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#prototype"><span class="nav-number">2.</span> <span class="nav-text">prototype</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更深一步的讨论"><span class="nav-number">3.</span> <span class="nav-text">更深一步的讨论</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

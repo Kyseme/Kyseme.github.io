@@ -95,7 +95,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/Kyseme/MarkdownPhoto/master/res/certifical.png">
 <meta property="og:image" content="http://p1.pstatp.com/large/pgc-image/15276921029615e6c447ded">
 <meta property="og:image" content="http://p3.pstatp.com/large/pgc-image/1527692102982e67c7bc915">
-<meta property="og:updated_time" content="2018-07-19T13:20:00.000Z">
+<meta property="og:updated_time" content="2018-08-07T01:30:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="https和http传输">
 <meta name="twitter:description" content="http:超文本传输协议,是一种用于分布式、协作式和超媒体信息系统的应用层协议，也是万维网的数据通信的基础，设计最初的目的是为了统一发布和接收HTML页面的标准，由统一资源标识符（Uniform Resource Identifiers，URI）来标识 https:超文本传输安全协议(HTTP+SSL/TLS)，常称为HTTP over TLS，HTTP over SSL或HTTP Secure,">
@@ -389,6 +389,53 @@
 <li>在网络层（IP 协议），增加作为通信目的地的 MAC 地址后转发给链路层。这样一来，发往网络的通信请求就准备齐全了</li>
 <li>接收端的服务器在链路层接收到数据，按序往上层发送，一直到应用层。当传输到应用层，才能算真正接收到由客户端发送过来的 HTTP请求</li>
 </ul>
+<p>我们需要知道TCP工作在网络OSI的七层模型中的第四层——Transport层，IP在第三层——Network层，ARP在第二层——Data Link层；在第二层上的数据，我们把它叫Frame，在第三层上的数据叫Packet，第四层的数据叫Segment。 同时，我们需要简单的知道，数据从应用层发下来，会在每一层都会加上头部信息，进行封装，然后再发送到数据接收端。这个基本的流程你需要知道，就是每个数据都会经过数据的封装和解封装的过程。 在OSI七层模型中，每一层的作用和对应的协议如下：</p>
+<table>
+<thead>
+<tr>
+<th>OSI中的层</th>
+<th>功能</th>
+<th>TCP/IP协议</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>应用层</td>
+<td>文件传输，电子邮件，文件服务，虚拟终端</td>
+<td>TFTP,HTTP,HTTPS,SNMP,FTP,SMTP,DNS,Telnet</td>
+</tr>
+<tr>
+<td>表示层</td>
+<td>数据格式化，代码转换，数据加密</td>
+<td>无协议</td>
+</tr>
+<tr>
+<td>会话层</td>
+<td>解除或建立与别的接点的联系</td>
+<td>无协议</td>
+</tr>
+<tr>
+<td>传输层</td>
+<td>提供端对端的接口</td>
+<td>TCP,UDP</td>
+</tr>
+<tr>
+<td>网络层</td>
+<td>为数据包选择路由</td>
+<td>IP,ICMP,RIP,OSPF,BGP,IGMP</td>
+</tr>
+<tr>
+<td>数据链路层</td>
+<td>传输有地址的帧以及错误检测功能</td>
+<td>SLIP,CSLIP,PPP,ARP,RARP,MTU</td>
+</tr>
+<tr>
+<td>物理层</td>
+<td>以二进制数据形式在物理媒体上传输数据</td>
+<td>ISO2110,TEEE802,IEEE802.2</td>
+</tr>
+</tbody>
+</table>
 <h2 id="HTTPS-HTTP-加密-认证-完整性保护"><a href="#HTTPS-HTTP-加密-认证-完整性保护" class="headerlink" title="HTTPS  = HTTP+ 加密 + 认证 + 完整性保护"></a>HTTPS  = HTTP+ 加密 + 认证 + 完整性保护</h2><p>HTTPS为了保证安全性，对传输的数据进行了加密或者签名,通常，HTTP 直接和 TCP 通信。当使用 SSL时，则演变成先和 SSL通<br>信，再由 SSL和 TCP 通信了。简言之，所谓 HTTPS，其实就是身披SSL协议这层外壳的 HTTP。</p>
 <p><img src="https://raw.githubusercontent.com/Kyseme/MarkdownPhoto/master/res/https.png" alt="image"></p>
 <p>在采用 SSL后，HTTP 就拥有了 HTTPS 的加密、证书和完整性保护这些功能。</p>
@@ -444,7 +491,7 @@
   <p><span>本文标题:</span><a href="/2018/07/14/https/">https和http传输</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 kyseme 的个人博客">kyseme</a></p>
   <p><span>发布时间:</span>2018年07月14日 - 10:07</p>
-  <p><span>最后更新:</span>2018年07月19日 - 21:07</p>
+  <p><span>最后更新:</span>2018年08月07日 - 09:08</p>
   <!-- <p><span>原始链接:</span><a href="/2018/07/14/https/" title="https和http传输">http://yoursite.com/2018/07/14/https/</a>
    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2018/07/14/https/"  aria-label="复制成功！"></i></span>
    </p>-->
@@ -585,7 +632,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -596,7 +643,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -607,7 +654,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

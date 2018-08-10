@@ -4,8 +4,136 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/07/20/baidu/</loc>
+    <lastmod>2018-08-10T02:58:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>牛客刷题之百度</title>
+        <pubTime>2018-07-20T01:42:11.000Z</pubTime>
+        
+        <tag>牛客</tag>
+         
+        <tag>百度</tag>
+         
+         
+           
+             
+              <breadCrumb title="牛客" url="http://yoursite.com/categories/%E7%89%9B%E5%AE%A2/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/07/27/pailie/</loc>
+    <lastmod>2018-08-10T02:58:01.000Z</lastmod>
+    <data>
+        <display>
+        <title>全排列</title>
+        <pubTime>2018-07-27T07:50:03.000Z</pubTime>
+        
+        <tag>算法</tag>
+         
+         
+           
+             
+              <breadCrumb title="牛客" url="http://yoursite.com/categories/%E7%89%9B%E5%AE%A2/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/08/03/sort/</loc>
+    <lastmod>2018-08-10T02:57:24.000Z</lastmod>
+    <data>
+        <display>
+        <title>归并排序和快速排序</title>
+        <pubTime>2018-08-03T09:11:46.000Z</pubTime>
+        
+        <tag>排序</tag>
+         
+         
+           
+             
+              <breadCrumb title="牛客" url="http://yoursite.com/categories/%E7%89%9B%E5%AE%A2/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/08/10/treeTreverse/</loc>
+    <lastmod>2018-08-10T02:56:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>深度遍历和广度遍历</title>
+        <pubTime>2018-08-10T02:55:17.000Z</pubTime>
+        
+        <tag>深度遍历</tag>
+         
+        <tag>广度遍历</tag>
+         
+         
+           
+             
+              <breadCrumb title="数据结构" url="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/07/14/https/</loc>
+    <lastmod>2018-08-07T01:30:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>https和http传输</title>
+        <pubTime>2018-07-14T02:14:42.000Z</pubTime>
+        
+        <tag>http</tag>
+         
+        <tag>https</tag>
+         
+         
+           
+             
+              <breadCrumb title="网络通信" url="http://yoursite.com/categories/%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/08/06/sticky/</loc>
+    <lastmod>2018-08-06T11:08:37.000Z</lastmod>
+    <data>
+        <display>
+        <title>sticky</title>
+        <pubTime>2018-08-06T10:51:15.000Z</pubTime>
+        
+        <tag>sticky</tag>
+         
+        <tag>postion</tag>
+         
+         
+           
+             
+              <breadCrumb title="css" url="http://yoursite.com/categories/css/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/08/06/hybird/</loc>
-    <lastmod>2018-08-06T08:22:20.000Z</lastmod>
+    <lastmod>2018-08-06T08:30:47.000Z</lastmod>
     <data>
         <display>
         <title>浅谈hybrid</title>
@@ -136,26 +264,6 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/08/03/sort/</loc>
-    <lastmod>2018-08-03T09:12:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>归并排序和快速排序</title>
-        <pubTime>2018-08-03T09:11:46.000Z</pubTime>
-        
-        <tag>排序</tag>
-         
-         
-           
-             
-              <breadCrumb title="排序" url="http://yoursite.com/categories/%E6%8E%92%E5%BA%8F/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2018/07/31/indexDB/</loc>
     <lastmod>2018-07-31T09:10:55.000Z</lastmod>
     <data>
@@ -198,48 +306,6 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/07/27/pailie/</loc>
-    <lastmod>2018-07-27T08:15:23.000Z</lastmod>
-    <data>
-        <display>
-        <title>全排列</title>
-        <pubTime>2018-07-27T07:50:03.000Z</pubTime>
-        
-        <tag>算法</tag>
-         
-         
-           
-             
-              <breadCrumb title="算法" url="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/07/20/baidu/</loc>
-    <lastmod>2018-07-20T10:37:32.000Z</lastmod>
-    <data>
-        <display>
-        <title>牛客刷题之百度</title>
-        <pubTime>2018-07-20T01:42:11.000Z</pubTime>
-        
-        <tag>牛客</tag>
-         
-        <tag>百度</tag>
-         
-         
-           
-             
-              <breadCrumb title="牛客" url="http://yoursite.com/categories/%E7%89%9B%E5%AE%A2/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2018/07/20/banner/</loc>
     <lastmod>2018-07-20T10:34:28.000Z</lastmod>
     <data>
@@ -257,28 +323,6 @@
            
              
               <breadCrumb title="html" url="http://yoursite.com/categories/html/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/07/14/https/</loc>
-    <lastmod>2018-07-19T13:20:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>https和http传输</title>
-        <pubTime>2018-07-14T02:14:42.000Z</pubTime>
-        
-        <tag>http</tag>
-         
-        <tag>https</tag>
-         
-         
-           
-             
-              <breadCrumb title="网络通信" url="http://yoursite.com/categories/%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1/"/>
           
         </display>
     </data>
