@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/09/07/flattern/</loc>
+    <lastmod>2018-09-07T13:23:15.468Z</lastmod>
+    <data>
+        <display>
+        <title>数据对象的扁平化处理</title>
+        <pubTime>2018-09-07T06:02:15.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+         
+           
+             
+              <breadCrumb title="牛客" url="http://yoursite.com/categories/%E7%89%9B%E5%AE%A2/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/07/20/baidu/</loc>
     <lastmod>2018-08-10T02:58:43.000Z</lastmod>
     <data>
@@ -313,9 +333,9 @@
         <title>banner</title>
         <pubTime>2018-07-20T10:19:36.000Z</pubTime>
         
-        <tag>banner</tag>
-         
         <tag>html</tag>
+         
+        <tag>banner</tag>
          
         <tag>图片轮播</tag>
          

@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="hybrid," />
+  <meta name="keywords" content="js," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="浅谈hybrid">
-<meta name="keywords" content="hybrid">
+<meta name="description" content="数组和对象的扁平化和反扁平化处理">
+<meta name="keywords" content="js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="浅谈hybrid">
-<meta property="og:url" content="http://yoursite.com/2018/08/06/hybird/index.html">
+<meta property="og:title" content="数据对象的扁平化处理">
+<meta property="og:url" content="http://yoursite.com/2018/09/07/flattern/index.html">
 <meta property="og:site_name" content="kyseme">
-<meta property="og:description" content="浅谈hybrid">
+<meta property="og:description" content="数组和对象的扁平化和反扁平化处理">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-06T08:30:47.000Z">
+<meta property="og:updated_time" content="2018-09-07T13:23:15.468Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="浅谈hybrid">
-<meta name="twitter:description" content="浅谈hybrid">
+<meta name="twitter:title" content="数据对象的扁平化处理">
+<meta name="twitter:description" content="数组和对象的扁平化和反扁平化处理">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/08/06/hybird/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/07/flattern/"/>
 
 
 
 
 
-  <title>浅谈hybrid | kyseme</title>
+  <title>数据对象的扁平化处理 | kyseme</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/06/hybird/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/07/flattern/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="kyseme">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">浅谈hybrid</h1>
+          <h1 class="post-title" itemprop="name headline">数据对象的扁平化处理</h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-06T16:12:32+08:00">
-                2018-08-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-07T14:02:15+08:00">
+                2018-09-07
               </time>
             
 
@@ -305,8 +305,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/移动开发/" itemprop="url" rel="index">
-                    <span itemprop="name">移动开发</span>
+                  <a href="/categories/牛客/" itemprop="url" rel="index">
+                    <span itemprop="name">牛客</span>
                   </a>
                 </span>
 
@@ -322,7 +322,7 @@
 
           
           
-             <span id="/2018/08/06/hybird/" class="leancloud_visitors" data-flag-title="浅谈hybrid">
+             <span id="/2018/09/07/flattern/" class="leancloud_visitors" data-flag-title="数据对象的扁平化处理">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -344,10 +344,6 @@
           
 
           
-              <div class="post-description">
-                  浅谈hybrid
-              </div>
-          
 
         </div>
       </header>
@@ -362,48 +358,61 @@
       
 
       
-        <p>hybrid:前端和客户端的混合开发</p>
-<p>优点</p>
-<ul>
-<li>可以快速迭代更新(无需app审核)</li>
-<li>体验流畅</li>
-<li>减少开发和沟通的成本, 双端公用一套代码</li>
-</ul>
-<p>缺点：</p>
-<ul>
-<li>开发成本高，联调/测试都比较麻烦</li>
-<li>运维成本高</li>
-</ul>
-<p>适用场景</p>
-<p>hybrid:产品的稳定功能，体验要求高，迭代频繁</p>
-<p>h5:单次的运营活动或者不常用的功能</p>
-<p>hybrid实现</p>
-<ul>
-<li>前端做好静态页面(js/css/html)，将文件交给客户端</li>
-<li>客户端拿到前端静态页面，以文件形式存储在app中</li>
-<li>客户端在一个webview中</li>
-<li>使用file协议加载静态页面</li>
-</ul>
-<p>替换文件</p>
-<ul>
-<li>替换每个客户端的静态文件</li>
-<li>客户端去server下载最新的文件</li>
-</ul>
-<p>流程</p>
-<ul>
-<li>分版本，有版本号，如201807112204</li>
-<li>将静态文件压缩成zip包，上传到服务器</li>
-<li>客户端每次启动，都去服务器端检查版本好</li>
-<li>如果服务器版本号大于客户端，就去下载</li>
-<li>下载完之后解压包，覆盖原来的包</li>
-</ul>
-<p>webview</p>
-<ul>
-<li>用户加载h5页面</li>
-</ul>
-<p>file协议：加载本地的资源<br>https/http:加载远程的资源<br>schema协议</p>
-<p>使用Native:体验要求极致，变化不频繁<br>使用hybrid:体验要求高，变化频繁<br>使用H5:体验无要求，不常用(如举报/反馈)</p>
-<p>具体详情可以参考文章<a href="http://www.cnblogs.com/yexiaochai/p/4921635.html" target="_blank" rel="noopener">hybrid技术的设计与实现</a></p>
+        <p>数组和对象的扁平化和反扁平化处理<br><a id="more"></a></p>
+<h3 id="请使用-JavaScript-实现名为-flatten-input-的函数，可以将传入的-input-对象（Object-或者-Array）进行扁平化处理并返回结果。具体效果如下："><a href="#请使用-JavaScript-实现名为-flatten-input-的函数，可以将传入的-input-对象（Object-或者-Array）进行扁平化处理并返回结果。具体效果如下：" class="headerlink" title="请使用 JavaScript 实现名为 flatten(input) 的函数，可以将传入的 input 对象（Object 或者 Array）进行扁平化处理并返回结果。具体效果如下："></a>请使用 JavaScript 实现名为 flatten(input) 的函数，可以将传入的 input 对象（Object 或者 Array）进行扁平化处理并返回结果。具体效果如下：</h3><p>const input = {<br>    a: 1,<br>    b: [ 1, 2, { c: true }, [ 3 ] ],<br>    d: { e: 2, f: 3 },<br>    g: null,<br>}<br>function flatten(input) {<br>    // 需要实现的代码<br>}</p>
+<p>// 返回<br>{<br>    “a”: 1,<br>    “b[0]”: 1,<br>    “b[1]”: 2,<br>    “b[2].c”: true,<br>    “b[3][0]”: 3,<br>    “d.e”: 2,<br>    “d.f”: 3,<br>    // “g”: null,  值为null或者undefined，丢弃<br>};</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">flatten</span>(<span class="params">input</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> result = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">recurse</span>(<span class="params">src,prop</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> toString = <span class="built_in">Object</span>.prototype.toString;</span><br><span class="line">        <span class="keyword">if</span>(src == <span class="literal">null</span>) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//如果是对象</span></span><br><span class="line">        <span class="keyword">if</span>(toString.call(src) == <span class="string">'[object Object]'</span>)&#123;</span><br><span class="line">            <span class="keyword">var</span> isEmpty = <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">let</span> p <span class="keyword">in</span> src)&#123;</span><br><span class="line">                isEmpty = <span class="literal">false</span>;</span><br><span class="line">                recurse(src[p],prop ? <span class="string">`<span class="subst">$&#123;prop&#125;</span>.<span class="subst">$&#123;p&#125;</span>`</span>:p);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(isEmpty &amp;&amp; prop)&#123;</span><br><span class="line">                result[prop] = &#123;&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(toString.call(src) == <span class="string">'[object Array]'</span>)&#123;</span><br><span class="line">            <span class="keyword">var</span> len = src.length;</span><br><span class="line">            <span class="keyword">if</span>(len &gt; <span class="number">0</span>)&#123;</span><br><span class="line">                src.forEach(<span class="function">(<span class="params">item,index</span>)=&gt;</span>&#123;</span><br><span class="line">                    recurse(item,prop ? <span class="string">`<span class="subst">$&#123;prop&#125;</span>[<span class="subst">$&#123;index&#125;</span>]`</span>:index);</span><br><span class="line">                &#125;)</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                result[prop] = [];</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            result[prop] = src;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    recurse(input,<span class="string">''</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(result);</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>将对象<br>var ob = {<br>    ‘a’: 1,<br>    ‘b[0]’: 1,<br>    ‘b[1]’: 2,<br>    ‘b[2].c’: true,<br>    ‘b[3][0]’: 3,<br>    ‘b[4][0]’: {},<br>    ‘d.e’: 2,<br>    ‘d.f’: 3<br>};<br>还原成<br>obj = {<br>    a: 1,<br>    b: [ 1, 2, { c: true }, [ 3 ] ],<br>    d: { e: 2, f: 3 },<br>    g: null,<br>}</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unflattern</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//当不是对象时</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">Object</span>(obj)!==obj || <span class="built_in">Array</span>.isArray(obj))&#123;</span><br><span class="line">        <span class="keyword">return</span> data;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> regex = <span class="regexp">/\.?([a-z])|\[(\d+)\]/g</span>;</span><br><span class="line">    <span class="keyword">var</span> result = &#123;&#125;;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> p <span class="keyword">in</span> obj)&#123;</span><br><span class="line">        <span class="keyword">let</span> cur = result;</span><br><span class="line">        <span class="keyword">let</span> prop = <span class="string">""</span>;</span><br><span class="line">        <span class="keyword">let</span> m;</span><br><span class="line">        <span class="keyword">while</span>(m = regex.exec(p))&#123;</span><br><span class="line">            cur = cur[prop] || (cur[prop] = (m[<span class="number">2</span>] ? []:&#123;&#125;));</span><br><span class="line">            prop = m[<span class="number">2</span>] || m[<span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        cur[prop] = obj[p];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result[<span class="string">""</span>]||result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>解释一下exec函数<br>exec() 方法在一个指定字符串中执行一个搜索匹配。返回一个结果数组或 null</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> regex = <span class="regexp">/\.?([a-z])|\[(\d+)\]/g</span>;</span><br><span class="line"><span class="keyword">var</span> result = regex.exec(<span class="string">'b[2].c'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(regex.lastIndex);<span class="comment">//1</span></span><br><span class="line"><span class="comment">// ["b", "b", undefined, index: 0, input: "b[2].c", groups: undefined]</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">result = regex.exec(<span class="string">'b[2].c'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(regex.lastIndex);<span class="comment">//4</span></span><br><span class="line"><span class="comment">//["[2]", undefined, "2", index: 1, input: "b[2].c", groups: undefined]</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">result = regex.exec(<span class="string">'b[2].c'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(regex.lastIndex);<span class="comment">//6</span></span><br><span class="line"><span class="comment">//[".c", "c", undefined, index: 4, input: "b[2].c", groups: undefined]</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">result = regex.exec(<span class="string">'b[2].c'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(regex.lastIndex);<span class="comment">//0</span></span><br><span class="line"><span class="comment">//null</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>同一正则表达式，在全局匹配模式下，每次实例的lastIndex属性的值为匹配文本最后一个字符的下一个位置，上面例子中第一次匹配的时候最后一个字符位置为1，则下一个位置为：2</p>
+</li>
+<li><p>当 exec() 再也找不到匹配的文本时，它将返回 null，并把 lastIndex 属性重置为 0。</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>对象</th>
+<th>属性/索引</th>
+<th>描述</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>result</code></td>
+<td><code>[0]</code></td>
+<td>匹配的全部字符串</td>
+<td><code>b</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>[1], ...[*n*]</code></td>
+<td>括号中的分组捕获</td>
+<td><code>[1] = b [2] = undefined</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>index</code></td>
+<td>匹配到的字符位于原始字符串的基于0的索引值</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>input</code></td>
+<td>原始字符串</td>
+<td><code>b[2].c</code></td>
+</tr>
+<tr>
+<td><code>re</code></td>
+<td><code>lastIndex</code></td>
+<td>下一次匹配开始的位置</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
@@ -426,7 +435,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hybrid/" rel="tag"><i class="fa fa-tag"></i> hybrid</a>
+            <a href="/tags/js/" rel="tag"><i class="fa fa-tag"></i> js</a>
           
         </div>
       
@@ -439,8 +448,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/06/commonjs/" rel="next" title="CommonJS和import的区别">
-                <i class="fa fa-chevron-left"></i> CommonJS和import的区别
+              <a href="/2018/08/10/treeTreverse/" rel="next" title="深度遍历和广度遍历">
+                <i class="fa fa-chevron-left"></i> 深度遍历和广度遍历
               </a>
             
           </div>
@@ -448,10 +457,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/06/sticky/" rel="prev" title="sticky">
-                sticky <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -503,8 +508,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -568,6 +582,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#请使用-JavaScript-实现名为-flatten-input-的函数，可以将传入的-input-对象（Object-或者-Array）进行扁平化处理并返回结果。具体效果如下："><span class="nav-number">1.</span> <span class="nav-text">请使用 JavaScript 实现名为 flatten(input) 的函数，可以将传入的 input 对象（Object 或者 Array）进行扁平化处理并返回结果。具体效果如下：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
